@@ -1,0 +1,10 @@
+attribute,group,n,actual_default_pct,avg_predicted_pct,rejected_pct,good_wrongly_rejected_pct,roc_auc
+gender,F,40561,6.99,7.33,17.0,14.6,0.7671
+gender,M,20940,10.17,9.36,25.8,21.8,0.7717
+age_band,<30,8866,11.3,11.55,35.8,31.7,0.7502
+age_band,30-39,16490,9.58,9.42,25.5,21.7,0.7789
+age_band,40-49,15282,7.57,7.62,17.9,15.2,0.7707
+age_band,50-59,13610,6.37,6.21,12.5,10.5,0.7583
+age_band,60+,7255,4.96,4.79,6.6,5.7,0.7354
+thin_file,not thin-file,45428,7.54,7.53,18.0,15.2,0.7757
+thin_file,thin-file,16075,9.59,9.41,25.5,22.1,0.7603

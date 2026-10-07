@@ -1,0 +1,58 @@
+{
+  "decision": "promoted",
+  "checks": [
+    {
+      "check": "ROC-AUC above minimum",
+      "passed": true,
+      "detail": "0.7728 (minimum 0.72)"
+    },
+    {
+      "check": "thin-file calibration",
+      "passed": true,
+      "detail": "predicted minus actual = -0.18 points (allowed +/-2.0)"
+    },
+    {
+      "check": "ROC-AUC at least as good as production",
+      "passed": true,
+      "detail": "candidate 0.7728 vs production 0.7728"
+    },
+    {
+      "check": "thin-file ROC-AUC not worse",
+      "passed": true,
+      "detail": "candidate 0.760 vs production 0.760"
+    },
+    {
+      "check": "thin_wrongly_rejected_gap_pp not much wider",
+      "passed": true,
+      "detail": "candidate 6.9 vs production 6.9"
+    },
+    {
+      "check": "age_wrongly_rejected_gap_pp not much wider",
+      "passed": true,
+      "detail": "candidate 26.0 vs production 26.0"
+    },
+    {
+      "check": "gender_wrongly_rejected_gap_pp not much wider",
+      "passed": true,
+      "detail": "candidate 7.2 vs production 7.2"
+    }
+  ],
+  "candidate": {
+    "roc_auc": 0.7728,
+    "pr_auc": 0.2671,
+    "thin_roc_auc": 0.76,
+    "thin_calibration_gap_pp": -0.18,
+    "thin_wrongly_rejected_gap_pp": 6.9,
+    "age_wrongly_rejected_gap_pp": 26.0,
+    "gender_wrongly_rejected_gap_pp": 7.2
+  },
+  "production": {
+    "roc_auc": 0.7728,
+    "pr_auc": 0.2671,
+    "thin_roc_auc": 0.76,
+    "thin_calibration_gap_pp": -0.18,
+    "thin_wrongly_rejected_gap_pp": 6.9,
+    "age_wrongly_rejected_gap_pp": 26.0,
+    "gender_wrongly_rejected_gap_pp": 7.2
+  }
+}

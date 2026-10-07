@@ -1,0 +1,18 @@
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# data (download it from Kaggle yourself; it cannot be redistributed)
+data/
+
+# experiment tracking
+mlflow.db
+mlruns/
+mlartifacts/
+
+# models: keep only the production model
+models/*
+!models/production/

@@ -1,0 +1,9 @@
+{
+  "roc_auc": 0.7728,
+  "pr_auc": 0.2671,
+  "thin_roc_auc": 0.76,
+  "thin_calibration_gap_pp": -0.18,
+  "thin_wrongly_rejected_gap_pp": 6.9,
+  "age_wrongly_rejected_gap_pp": 26.0,
+  "gender_wrongly_rejected_gap_pp": 7.2
+}
