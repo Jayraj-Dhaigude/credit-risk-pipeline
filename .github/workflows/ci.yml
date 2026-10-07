@@ -31,9 +31,19 @@ jobs:
         run: docker build -t credit-risk-api .
       - name: Start the container
         run: docker run -d --name api -p 8000:8000 credit-risk-api
-      - name: Smoke test the API
+      - name: Wait for the API to be ready
         run: |
-          curl --retry 15 --retry-delay 2 --retry-connrefused --fail http://localhost:8000/health
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8000/health > /dev/null; then
+              echo "API is up after $i attempt(s)"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "API did not start within 60 seconds"
+          exit 1
+      - name: Smoke test a prediction
+        run: |
           curl --fail -s -X POST http://localhost:8000/predict \
             -H "Content-Type: application/json" \
             -d '{"age_years":29,"annual_income":150000,"loan_amount":450000,"loan_annuity":22000}' \
